@@ -18,7 +18,7 @@ Centralized Tuple Space implementation using Erlang/OTP based on the Linda coord
 
 ## Setup
 
-**Terminal 1 — Server (do this first):**
+**Terminal 1 — Server:**
 ```bash
 erl -sname server -setcookie mycookie
 ```
@@ -36,7 +36,7 @@ erl -sname client1 -setcookie mycookie
 net_adm:ping('server@Selssabils-MacBook').
 ```
 
-**Back on Terminal 1 — Server (after client is connected):**
+**Back on Terminal 1 — Server:**
 ```erlang
 ts:add_node(myts, 'client1@Selssabils-MacBook').
 ts:nodes(myts).
